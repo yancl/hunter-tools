@@ -1,0 +1,4 @@
+package: .
+import:
+- package: github.com/Shopify/sarama
+  version: ^1.17.0

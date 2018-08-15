@@ -1,0 +1,2 @@
+vendor/*
+cmd/spanner/spanner
