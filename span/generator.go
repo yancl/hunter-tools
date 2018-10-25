@@ -13,10 +13,14 @@ import (
 const (
 	SERVICE_NAME = "service_name"
 	REMOTE_KIND  = "remote_kind"
+	KIND         = "kind"
 	QUERY        = "query"
 )
 
 const (
+	KIND_GRPC = "grpc"
+	KIND_HTTP = "http"
+
 	REMOTE_KIND_GRPC  = "grpc"
 	REMOTE_KIND_HTTP  = "http"
 	REMOTE_KIND_MYSQL = "mysql"
@@ -59,6 +63,7 @@ func createSpanThread() []*traceproto.Span {
 		operationName: "/api/user/:uid/profile",
 		tags: map[string]interface{}{
 			REMOTE_KIND: REMOTE_KIND_HTTP,
+			KIND:        KIND_HTTP,
 			"uid":       123456,
 		},
 		logs: []Log{
